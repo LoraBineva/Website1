@@ -1,1 +1,129 @@
-# sghiuxb
+# <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>School Website Project</title>
+
+    <!-- Iconscout CDN -->
+    <link href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
+    <!--Google Fonts Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <!-----------------Navbar--------------->
+    <nav>
+        <div class="conatiner nav__container">
+            <a href="index.html"><h1 id="ACS__Logo">ACS LOGO</h1></a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Pomodoro Timer</a></li>
+                <li><a href="courses.html">Flashcards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="open-menu-btn"> <i class="uil uil-bars"></i> </button>
+            <button id="open-menu-btn"> <i class="uil uil-times-circle"></i> </button>
+        </div>
+    </nav>
+    <!--End of Navbar-->
+    <!-----------------Header--------------->
+    <header>
+        <div class="container header__container">
+            <div class="header__left">
+                <h1>Welcome to our new ACS website</h1>
+                <p>
+                    We hope that here you will be able to find lots of helpful tools and recources that will make your life easier.
+                    <br /> If you want to contact us or have a new idea worth sharing, click on the button below and fill out form.
+                </p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+
+            <div class="header__right">
+                <div class="header__right-image">
+                    <img src="https://www.acs.bg/media/5286/allschoolphoto_ostrander_2022.jpg" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End of Header-->
+    <!-----------------Categories--------------->
+    <section class="categories">
+        <div class="container categories__container">
+            <div class="categories__left">
+                <h1>Categories</h1>
+                <p>
+                   Here you will be able to find many helpful tools that are specifically designed for your studies.
+                </p>
+                <!--<a href="#" class="btn">Learn More</a>--> <!--A button which may be useful-->
+            </div>
+
+            <div class="categories__right">
+                <article class="category">
+                    <span class="category__icon"><i class="uil uil-clock"></i></span>
+                    <h5>Pomodoro Timer</h5>
+                    <p>This timer will help you manage the useful and often essential technique for better learning -- splitting your time into 25 minutes of studying and 5 minutes of break.</p>
+                </article>
+                <!--New Category-->
+                <article class="category">
+                    <span class="category__icon"><i class="uil uil-transaction"></i></span>
+                    <h5>Flashcards</h5>
+                    <p>What better way to learn a new languages or many new terms, than learning through flashcards.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!--End of Categories-->
+    <!-----------------FAQS--------------->
+    <section class="faqs">
+        <h2>Frequently Asked Question</h2>
+        <h3>Hopefully they can help you make some ACS decisions easily :)</h3>
+        <div class="container faqs__container">
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer"></div>
+                <h4>How do I know which is the right elective?</h4>
+                <p>
+                    It highly depends on your interest in spheres both inside and outside of class. Since the electives affect
+                    your GPA, you should consider fields in which you want to learn more but in which you will also be able to succeed.
+                </p>
+            </article>
+            <!--New question-->
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer"></div>
+                <h4>How do I chose a profile? What are my options?</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam sodales elit sed mauris convallis imperdiet.
+                </p>
+            </article>
+            <!--New question-->
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer"></div>
+                <h4>Which is the hardest grade level? <br> Which is the most stresfull one?</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam sodales elit sed mauris convallis imperdiet.
+                </p>
+            </article>
+            <!--New question-->
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer"></div>
+                <h4>How can I properly manage my time?</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam sodales elit sed mauris convallis imperdiet.
+                </p>
+            </article>
+        </div>
+    </section>
+    <!--End of FAQS-->
+
+
+    <script src="../main.js"></script>
+
+</body>
+</html>
