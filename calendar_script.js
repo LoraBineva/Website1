@@ -32,13 +32,13 @@ const months = [
 // function to add days
 function initCalendar() {
 	// to get prev month days and current month all days and rem next month days
-		const firstDay = new Date(year, month, 1);
-		const lastDay = new Date(year, month + 1, 0);
-		const prevLastDay = new Date(year, month, 0);
-		const prevDays = prevLastDay.getDate();
-		const lastDate = lastDay.getDate();
-		const day = firstDay.getDay();
-		const nextDays = 7 - lastDay.getDay() - 1;
+	const firstDay = new Date(year, month, 1);
+	const lastDay = new Date(year, month + 1, 0);
+	const prevLastDay = new Date(year, month, 0);
+	const prevDays = prevLastDay.getDate();
+	const lastDate = lastDay.getDate();
+	const day = firstDay.getDay();
+	const nextDays = 7 - lastDay.getDay() - 1;
 
 	// update date top of calendar
 	date.innerHTML = months[month] + " " + year;
@@ -56,7 +56,7 @@ function initCalendar() {
 			i === new Date().getDate() &&
 			year === new Date().getFullYear() &&
 			month === new Date().getMonth()
-		){
+		) {
 			days += `<div class="day today">${i}</div>`;
 		}
 		else {
@@ -68,78 +68,78 @@ function initCalendar() {
 		days += `<div class="day next-date">${j}</div>`;
 	}
 	daysContainer.innerHTML = days;
-
-initCalendar();
-
-
-// prev month
-function prevMonth() {
-	month--;
-	if (month < 0) {
-		month = 11;
-		year--;
-	}
-	initCalendar();
 }
-
-//next month
-function nextMonth() {
-	month++;
-	if (month > 11) {
-		month = 0;
-		year++;
-	}
 	initCalendar();
-}
 
-// add event listener on prev and next month
-prev.addEventListener("click", prevMonth);
-next.addEventListener("click", nextMonth);
 
-initCalendar();
-// calendar is ready
-
-// Go to date and Go to today functions
-todayBtn.addEventListener("click", () => {
-	today = new Date();
-	month = today.getMonth();
-	year = today.getFullYear();
-	initCalendar();
-});
-
-dateInput.addEventListener("input", (e) => {
-	// allows only numbers and nothing else
-	dateInput.value = dateInput.value.replace(/[^0-9/]/g, "");
-	// add a dash after two numbers are entered
-	if (dateInput.value.length === 2) {
-		dateInput.value += "/";
-	}
-	// not allowing more than 7 characters
-	if (dateInput.value.length > 7) {
-		dateInput.value = dateInput.value.slice(0, 7);
-	}
-	// if backspace pressed
-	if (e.inputType === "deleteContentBackward") {
-		if (dateInput.value.length === 3) {
-			dateInput.value = dateInput.value.slice(0, 2);
+	// prev month
+	function prevMonth() {
+		month--;
+		if (month < 0) {
+			month = 11;
+			year--;
 		}
+		initCalendar();
 	}
-});
-// function to go to entered date
-gotoBtn.addEventListener("click", gotoDate);
 
-function gotoDate() {
-	console.log("here");
-	const dateArr = dateInput.value.split("/");
-	if (dateArr.length === 2) {
-		// date validation
-		if (dateArr[0] > 0 && dateArr[0] < 13 && dateArr[1].length === 4) {
-			month = dateArr[0] - 1;
-			year = dateArr[1];
-			initCalendar();
-			return;
+	//next month
+	function nextMonth() {
+		month++;
+		if (month > 11) {
+			month = 0;
+			year++;
 		}
+		initCalendar();
 	}
-	// if invalid date
-	alert("Invalid Date");
-}
+
+	// add event listener on prev and next month
+	prev.addEventListener("click", prevMonth);
+	next.addEventListener("click", nextMonth);
+
+	initCalendar();
+	// calendar is ready
+
+	// Go to date and Go to today functions
+	todayBtn.addEventListener("click", () => {
+		today = new Date();
+		month = today.getMonth();
+		year = today.getFullYear();
+		initCalendar();
+	});
+
+	dateInput.addEventListener("input", (e) => {
+		// allows only numbers and nothing else
+		dateInput.value = dateInput.value.replace(/[^0-9/]/g, "");
+		// add a dash after two numbers are entered
+		if (dateInput.value.length === 2) {
+			dateInput.value += "/";
+		}
+		// not allowing more than 7 characters
+		if (dateInput.value.length > 7) {
+			dateInput.value = dateInput.value.slice(0, 7);
+		}
+		// if backspace pressed
+		if (e.inputType === "deleteContentBackward") {
+			if (dateInput.value.length === 3) {
+				dateInput.value = dateInput.value.slice(0, 2);
+			}
+		}
+	});
+	// function to go to entered date
+	gotoBtn.addEventListener("click", gotoDate);
+
+	function gotoDate() {
+		console.log("here");
+		const dateArr = dateInput.value.split("/");
+		if (dateArr.length === 2) {
+			// date validation
+			if (dateArr[0] > 0 && dateArr[0] < 13 && dateArr[1].length === 4) {
+				month = dateArr[0] - 1;
+				year = dateArr[1];
+				initCalendar();
+				return;
+			}
+		}
+		// if invalid date
+		alert("Invalid Date");
+	}
