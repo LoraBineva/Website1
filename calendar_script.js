@@ -142,4 +142,27 @@ function initCalendar() {
 		}
 		// if invalid date
 		alert("Invalid Date");
-	}
+}
+
+// Events 
+const addEventBtn = document.querySelector(".add-event"),
+addEventContainer = document.querySelector(".add-event-wrapper"),
+addEventCloseBtn = document.querySelector(".close"),
+      
+addEventCloseBtn = document.querySelector(".close"),
+
+
+//Buttons to add and remove events
+addEventBtn.addEventListener("click", () => {
+  addEventContainer.classList.toggle("active");
+});
+addEventCloseBtn.addEventListener("click", () => {
+  addEventContainer.classList.remove("active");
+});
+
+document.addEventListener("click", (e) => {
+// if click outside
+   if (e.target != addEventBtn && !addEventContainer.contains(e.target)){
+      addEventContainer.classList.remove("active");
+   }
+});
