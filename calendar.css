@@ -294,3 +294,48 @@ body{
 .events .event:nth-child(even){
     background:transparent;
 }
+/* new code begins here */
+.events .event:hover{
+    background: linear-gradient(90 deg, var(--primary-color),transperant);
+}
+.events .event .title{
+    display:flex;
+    align-items: center;
+    pointer-events: none;
+}
+.events .event .title .event-title {
+    font-size: 1rem;
+    font-weight:400;
+    margin-left: 20px;
+}
+.events .event .title i{
+    color: var(--primary-color);
+    font-size: 0.5rem;
+}
+.events .event:hover .title i, 
+.events .event:hover .event-time {
+    color: #fff;
+} 
+.events .event .event-time {
+    font-size:0.8rem;
+    font-weight: 400;
+    color: #878895;
+    margin-left: 15px;
+    pointer-events: none;
+} 
+.event::after{
+    content: "✓";
+    position:absolute;
+    top:50%;
+    right:0;
+    font-size:0.3rem;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    opacity:0.3;
+    color: var(--primary-color);
+    transform: translateY(-50%);
+}
+.event:hover::after{
+    display:flex;
+}
