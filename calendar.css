@@ -143,7 +143,7 @@ body{
     box-shadow: 0 0 10px 2px var(--primary-color);
 }
 .calendar .days .today {
-    font-size: 20rem;
+    font-size: 2rem;
     background-color: #1f2641;
 }
 .calendar .days .event{
@@ -238,7 +238,7 @@ body{
     color: var(--color-white);
 }*/
 
-.container .right{
+.right{
     position:relative;
     width:40%;
     min-height: 100%;
@@ -339,8 +339,8 @@ body{
 .event:hover::after{
     display:flex;
 }
-.add-event-wrapper{
-    position: absolute;
+.right .add-event-wrapper{
+    position:absolute;
     bottom:100px;
     left:50%;
     width:90%;
@@ -376,7 +376,7 @@ body{
     font-weight:500;
 }
 .add-event-body{
-    width:100%;
+    width:50%;
     height:100%;
     display:flex;
     flex-direction:column;
