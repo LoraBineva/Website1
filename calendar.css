@@ -339,3 +339,15 @@ body{
 .event:hover::after{
     display:flex;
 }
+.add-event-wrapper{
+    position: absolute;
+    bottom:100px;
+    left:50%;
+    width:90%;
+    max-height:0;
+    overflow:hidden;
+    border-radius:5px;
+    background-color:#fff;
+    transform:translateX(-50%);
+    transition: max-height 0.5s;
+}
