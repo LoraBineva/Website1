@@ -323,7 +323,7 @@ body{
     margin-left: 15px;
     pointer-events: none;
 } 
-.event::after{
+.events .event::after{
     content: "✓";
     position:absolute;
     top:50%;
@@ -336,7 +336,7 @@ body{
     color: var(--primary-color);
     transform: translateY(-50%);
 }
-.event:hover::after{
+.events .event:hover::after{
     display:flex;
 }
 .right .add-event-wrapper{
