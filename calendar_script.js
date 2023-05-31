@@ -45,6 +45,18 @@ const eventsArr = [
 	},
 	],
     },
+//
+{
+	day:29,
+	month:5,
+	year: 2023,
+	events: [
+	{
+		title: "Event 1 lorem ipsun dolar sit genfa tersd dsad",
+		time: "10:00 AM",
+	},
+	],
+    },
 ];
 
 // function to add days
@@ -233,3 +245,8 @@ addEventTo.addEventListener("input", (e) => {
 		addEventTo.value = addEventTo.value.slice(0,5);
 	}
 });
+
+//function which adds listner on days after rendered
+function addListner(){
+    const days = document.querySelectorAll(".day"); 
+}
