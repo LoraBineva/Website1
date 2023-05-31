@@ -28,6 +28,24 @@ const months = [
 	"November",
 	"December",
 ];
+//events array
+const eventsArr = [
+{
+	day:24,
+	month:5,
+	year: 2023,
+	events: [
+	{
+		title: "Event 1 lorem ipsun dolar sit genfa tersd dsad",
+		time: "10:00 AM",
+	},
+	{
+		title:"Event 2",
+		time: "11:00 AM",
+	},
+	],
+    },
+];
 
 // function to add days
 function initCalendar() {
@@ -51,16 +69,40 @@ function initCalendar() {
 	}
 	//current month days
 	for (let i = 1; i <= lastDate; i++) {
+	//check if there is an event on the current date
+	let event = false;
+	eventsArr.forEach((eventObj) => {
+		if(
+		eventObj.day == i &&
+		eventObj.month == month + 1 &&
+		eventObj.year == year
+		)
+		{
+		 // if event found
+		 event = true;
+		}
+	})
 		//if day is today add class today
 		if (
 			i === new Date().getDate() &&
 			year === new Date().getFullYear() &&
 			month === new Date().getMonth()
 		) {
-			days += `<div class="day today">${i}</div>`;
+			// if event found also add event class
+			if(event){
+			days += `<div class="day today event">${i}</div>`;
+			}
+			else {
+		 		days += `<div class="day today">${i}</div>`;
 		}
+			
 		else {
-			days += `<div class="day ">${i}</div>`;
+			if(event){
+			days += `<div class="day event">${i}</div>`;
+			}
+			else {
+		 		days += `<div class="day ">${i}</div>`;
+		}
 		}
 	}
 	// next month days
@@ -167,14 +209,27 @@ document.addEventListener("click", (e) => {
    }
 });
 
-//time formatting
+//time formatting - from time
 addEventFrom.addEventListener("input", (e) => {
 	// allow anything except numbers
-	addEventFrom.value = add.EventFrom.value.replace(/[^0-9]/g, "");
+	addEventFrom.value = addEventFrom.value.replace(/[^0-9]/g, "");
 	if(addEventFrom.value.length==2){
 		addEventFrom.value += ":";
 	}
+	// this doesn't let the user enter more than 5 chars
 	if(addEventFrom.value.length > 5){
 		addEventFrom.value = addEventFrom.value.slice(0,5);
+	}
+});
+// time formatting - to time
+addEventTo.addEventListener("input", (e) => {
+	// allow anything except numbers
+	addEventTo.value = addEventTo.value.replace(/[^0-9]/g, "");
+	if(addEventTo.value.length==2){
+		addEventTo.value += ":";
+	}
+	// this doesn't let the user enter more than 5 chars
+	if(addEventTo.value.length > 5){
+		addEventTo.value = addEventTo.value.slice(0,5);
 	}
 });
