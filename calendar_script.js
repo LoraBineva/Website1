@@ -444,6 +444,7 @@ function convertTime(time){
 
 // function which removes events on click
 eventsConatiner.addEventListener("click", (e) => {
+	alert("Are you sure you want to delete this event?");
 	if(e.target.classList.contains("event")){
 	  const eventTitle = e.target.children[0].children[1].innerHTML;
 	  // get the title of the event and then serach in the array through it so you can delete it
