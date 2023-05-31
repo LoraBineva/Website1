@@ -147,10 +147,10 @@ function initCalendar() {
 // Events 
 const addEventBtn = document.querySelector(".add-event"),
 addEventContainer = document.querySelector(".add-event-wrapper"),
-addEventCloseBtn = document.querySelector(".close"),
-      
-addEventCloseBtn = document.querySelector(".close"),
-
+addEventCloseBtn = document.querySelector(".close"),      
+addEventTitle = document.querySelector(".event-name"),
+addEventFrom = document.querySelector(".event-time-from"),
+addEventTo = document.querySelector(".event-time-to");   
 
 //Buttons to add and remove events
 addEventBtn.addEventListener("click", () => {
@@ -165,4 +165,16 @@ document.addEventListener("click", (e) => {
    if (e.target != addEventBtn && !addEventContainer.contains(e.target)){
       addEventContainer.classList.remove("active");
    }
+});
+
+//time formatting
+addEventFrom.addEventListener("input", (e) => {
+	// allow anything except numbers
+	addEventFrom.value = add.EventFrom.value.replace(/[^0-9]/g, "");
+	if(addEventFrom.value.length==2){
+		addEventFrom.value += ":";
+	}
+	if(addEventFrom.value.length > 5){
+		addEventFrom.value = addEventFrom.value.slice(0,5);
+	}
 });
