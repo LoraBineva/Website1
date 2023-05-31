@@ -9,7 +9,8 @@ const calendar = document.querySelector(".calendar"),
 	dateInput = document.querySelector(".date-input"),
 	eventDay = document.querySelector(".event-day"),
 	eventDate = document.querySelector(".event-date"),
-	eventsContainer = document.querySelector(".events");
+	eventsContainer = document.querySelector(".events"),
+    addEventSubmit = document.querySelector(".add-event-btn");
 
 let today = new Date();
 let activeDay;
@@ -355,3 +356,17 @@ function updateEvents(date){
 	eventsContainer.innerHTML = events;
 	
 }
+
+//function to add events
+addEventSubmit.addEventListener("click", () => {
+    const eventTitle = addEventTitle.value;
+    const eventTimeFrom = addEventFrom.value;
+    const eventTimeTo = addEventTo.value;
+
+    // validations
+    if(eventTitle == "" || eventTimeFrom == "" || eventTimeTo == ""){
+    alert("Please fill all the fields")
+    }
+})
+
+
