@@ -1,0 +1,148 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+:root {
+    --color-primary: #a247e9;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rbga(247,88,66,0.4);
+    --color-white: #ffffff;
+    --color-light: rbga(255,255,255,0.7);
+    --color-black: #000000;
+    --color-bg: #1f2641;
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+    --color-bg3: #8790fa;
+
+    --container-width-lg: 80%; /*this is about how the container is on different devices*/
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    background-color: var(--color-bg);
+}
+
+header{
+    background-color: white;
+}
+
+button{
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+button:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.container{
+    width: 100%;
+    margin:auto;
+
+}
+#nav{
+    display: flex;
+    color: #8790fa;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--color-bg1);
+}
+
+#nav button{
+    font-family: inherit;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #424890;
+    border: #424890;
+    color: var(--color-bg3);
+}
+
+.create-box{
+    width: 380px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: var(--color-bg3);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.create-box textarea{
+width: 100%;
+border-radius: 5px;
+font-family: inherit;
+border: 1px solid var(--color-bg3);
+background-color: #424890;
+}
+
+.create-box button{
+    width: fit-content;
+    background-color: #424890;
+    border: #424890;
+    color: var(--color-bg3);
+}
+
+.flashcards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin:auto;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.flashcard{
+width: 370px;
+height: 200px;
+padding: 20px;
+word-wrap: break-word;
+margin: 10px;
+background-color: white;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.flashcard h2{
+    font-size: 1rem;
+}
+
+@media(max-width:768px){
+    .flashcard{
+        margin:auto;
+    }
+    .flashcard{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:480px){
+    #nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .create-box{
+        width: 100%;
+
+    }
+    .flashcard{
+        width: 100px;
+    }
+}
