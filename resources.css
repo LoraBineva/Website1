@@ -65,6 +65,9 @@ body {
     border-radius: 2rem;
     transition: var(--transition);
 }
+.category:nth-child(2n){ /*This can be done for the icon as well if we just add the class of the icon*/
+    background: var(--color-primary); 
+}
 
 .category:hover{
     box-shadow: 0 2rem 2rem var(--color-bg);
