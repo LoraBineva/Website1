@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+	
+    <link rel="stylesheet" href="help.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--NavBar Section-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="help.html">Forums</a></li>
+                    <li class="nav-item"><a href="posts.html">Posts</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">My Forum</div>
+        </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">Everything</option>
+                    <option value="Titles">Titles</option>
+                </select>
+                <input type="text" name="q" placeholder="search ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Mental health</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="replies.html">Committment and positivity</a></h4>
+                    <p>Description Content: How do you keep a positive mindset when you get overwhelmed?</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Topics</span>
+                </div>
+            </div>
+        </div>
+        <!--More-->
+        
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Productivity</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="replies.html">Staying motivated</a></h4>
+                    <p>Description Content: Where do you find you motivation?</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Topics</span>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="replies.html">School tips</a></h4>
+                    <p>Description Content: What do you do to survive on schooldays?</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Topics</span>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="replies.html">Study hacks</a></h4>
+                    <p>Description Content: What's your best memory retention technique?</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Topics</span>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="replies.html">Organization</a></h4>
+                    <p>Description Content: How do you stay on top of your work?</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Topics</span>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="replies.html">Time Management</a></h4>
+                    <p>Description Content: Any advice for extracurricular and academic balance?</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Topics</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Exams</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="replies.html">Test taking</a></h4>
+                    <p>Description Content: Any strategies? Do's and Don't's?</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Topics</span>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="replies.html">Making time</a></h4>
+                    <p>Description Content: When is the best time to study?</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>24 Posts | 12 Topics</span>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+        </div>
+        <!---->
+    </div>
+
+    <!-- Forum Info -->
+    <div class="forum-info">
+        <div class="chart">
+            Student Forum - Ask away : ) &nbsp;
+        </div>
+        <span>Check <a href="posts.html">the latest posts</a> .</span><br>
+    </div>
+
+    <footer>
+        <span>&copy;  PBL Project</span>
+    </footer>
+    <script src="help.js"></script>
+</body>
+</html>
