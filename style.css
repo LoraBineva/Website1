@@ -249,6 +249,7 @@ header{
     height: fit-content;
     background: var(--color-bg3);
     cursor: pointer;
+    flex-direction: column;
 }
 
 .faq h4{ /*This changes the questions*/
