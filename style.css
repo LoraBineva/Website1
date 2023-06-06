@@ -89,7 +89,7 @@ img{
 
 /*----------------NAVBAR-------------*/
 nav {
-    background: var(--color-bg); /*He chnages this to trasnperent*/
+    background: var(--color-bg); /*This to trasnperent*/
     width: 100vw;
     height: 5rem;
     position: fixed;
@@ -178,7 +178,7 @@ header{
 }
 .categories__right{
     display:grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
 }
 
@@ -189,7 +189,7 @@ header{
     transition:var(--transition);
 }
 
-.category:nth-child(2){ /*This can be done for the icon as well if we just add the class of the icon*/
+.category:nth-child(2n){ /*This can be done for the icon as well if we just add the class of the icon*/
     background: var(--color-primary); 
 }
 
@@ -203,7 +203,7 @@ header{
     padding: 0.7rem;
     border-radius: 0.9rem;
 }
-.category:nth-child(2) .category__icon{
+.category:nth-child(2n) .category__icon{
     background: var(--color-bg2);
     padding: 0.7rem;
     border-radius: 0.9rem;
@@ -245,6 +245,7 @@ header{
     padding: 2rem;
     display: flex;
     align-items: center;
+	gap: 1.4rem;
     height: fit-content;
     background: var(--color-bg3);
     cursor: pointer;
@@ -266,5 +267,6 @@ header{
 }
 
 .faq.open p{
-    display:block;
+	align-content: center;
+    display:flex;
 }
