@@ -32,7 +32,7 @@ const months = [
 	"December",
 ];
 //events array
-/* const eventsArr = [
+const eventsArr = [
 {
 	day:24,
 	month:5,
@@ -60,7 +60,7 @@ const months = [
 	},
 	],
     },
-]; */
+]; 
 let eventsArr = [];
 getEvents();
 
