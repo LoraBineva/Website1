@@ -11,6 +11,7 @@
     --color-bg1: #2e3267;
     --color-bg2: #424890;
     --color-bg3: #8790fa;
+    --color-bg4: #535aad;
 
     --container-width-lg: 80%; /*this is about how the container is on different devices*/
     --container-width-md: 90%;
@@ -66,7 +67,7 @@ body {
     transition: var(--transition);
 }
 .category:nth-child(2n){ /*This can be done for the icon as well if we just add the class of the icon*/
-    background: var(--color-primary); 
+    background: var(--color-bg4); 
 }
 
 .category:hover{
